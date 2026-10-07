@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ecolife | Edukasi dan Pemantauan Kebiasaan Konsumsi Ramah Lingkungan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f3f8f1;--card:#fff;--tx:#14301d;--mu:#587064;--pr:#23864a;--pr2:#e2f1e6;--bd:#d2e2d6;--wa:#d9534f;--md:#e0a02f;--hero:#14301d;--ht:#eaf6ee;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1912;--card:#16251b;--tx:#e6f1e9;--mu:#9bb3a2;--pr:#4cc474;--pr2:#1e3527;--bd:#2a4132;--hero:#0a120d}}
+:root[data-theme="dark"]{--bg:#0e1912;--card:#16251b;--tx:#e6f1e9;--mu:#9bb3a2;--pr:#4cc474;--pr2:#1e3527;--bd:#2a4132;--hero:#0a120d}
+html{scroll-padding-top:calc(64px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.w{max-width:1000px;margin:0 auto;padding:0 18px}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--bd)}
+.top .w{display:flex;align-items:center;gap:12px;height:60px}
+.brand{font-weight:800;font-size:1.25rem;color:var(--tx);text-decoration:none}.brand span{color:var(--pr)}
+nav{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+nav a{padding:8px 11px;border-radius:8px;color:var(--mu);text-decoration:none;font-weight:600;font-size:.92rem;white-space:nowrap}
+nav a:hover,nav a:focus-visible{background:var(--pr2);color:var(--pr)}
+#th{border:1px solid var(--bd);background:var(--card);border-radius:8px;padding:6px 9px;cursor:pointer}
+a:focus-visible,button:focus-visible,select:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--pr);outline-offset:2px}
+.hero{background:var(--hero);color:var(--ht);padding:64px 0 56px}
+.hero .w{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+.inst{color:#9fd3b0;font-size:.9rem;margin:0 0 14px}
+.hero h1{font-size:clamp(2.1rem,5.5vw,3.3rem);line-height:1.1;margin:0 0 16px;font-weight:800}
+.hero p{color:#c4e0cc;margin:0 0 24px;max-width:52ch}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--pr);color:#fff;border:0;border-radius:10px;padding:12px 20px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none}
+.btn.s{background:transparent;color:inherit;border:1px solid var(--bd)}
+.hero .btn.s{border-color:#4d7a5c;color:var(--ht)}
+.hs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hs div{background:#1d4029;border-radius:14px;padding:16px}
+.hs b{display:block;font-size:1.7rem;color:#7be39b;line-height:1.2}.hs small{color:#b5d6c0}
+section.p{padding:56px 0}section.p.alt{background:var(--pr2)}
+h2{font-size:1.8rem;margin:0 0 8px;line-height:1.2}.lead{color:var(--mu);max-width:62ch;margin:0 0 26px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:18px;margin:0 0 14px}
+.card h3{margin:0 0 6px;font-size:1.08rem}.card p{margin:0}
+.g{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}.g .card{margin:0}
+.st{background:var(--pr2);border-radius:12px;padding:12px;text-align:center}
+.st b{display:block;font-size:1.5rem;color:var(--pr)}.st small{color:var(--mu)}
+.n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--pr);color:#fff;font-weight:800;margin-bottom:8px}
+ul{padding-left:20px;margin:6px 0}li{margin:3px 0}
+.act{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--bd)}
+.act:last-child{border:0}.act label{flex:1;cursor:pointer}.act input{width:20px;height:20px;accent-color:var(--pr)}
+.pt{font-weight:700;color:var(--pr)}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.f label{display:block;font-size:.85rem;color:var(--mu);margin-bottom:3px}
+.f select,.f input[type=number]{width:100%;padding:10px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font:inherit}
+.ck{display:flex;flex-wrap:wrap;gap:12px}.ck label{display:flex;gap:6px;align-items:center;color:var(--tx);font-size:.95rem;margin:0}
+details{margin:14px 0}summary{cursor:pointer;color:var(--pr);font-weight:600}
+.bar{height:12px;border-radius:6px;background:var(--pr2);overflow:hidden;margin:3px 0 10px}.bar i{display:block;height:100%}
+.res{text-align:center;padding:8px 0 14px}.res .lv{font-size:2.4rem;font-weight:800}
+.note{font-size:.85rem;color:var(--mu)}
+a{color:var(--pr)}
+.sc{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.92rem}
+th,td{padding:9px 10px;border-bottom:1px solid var(--bd);text-align:left;white-space:nowrap}th{color:var(--mu);font-weight:600}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mem{display:flex;gap:14px;align-items:center}.av{width:56px;height:56px;border-radius:50%;background:var(--pr);color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.2rem;flex:none}
+footer{background:var(--hero);color:#b5d6c0;padding:30px 0;font-size:.9rem}footer b{color:var(--ht)}
+@media(max-width:720px){.hero .w,.two{grid-template-columns:1fr}.hero{padding:40px 0}.top .w{height:auto;flex-wrap:wrap;padding-top:8px;padding-bottom:6px}nav{order:3;width:100%;margin:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.lg{width:32px;height:32px;vertical-align:middle;margin-right:8px}.hl{width:76px;height:76px;margin-bottom:12px;display:block}
+#tt{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--hero);color:var(--ht);padding:10px 16px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .2s;z-index:20;max-width:90%;text-align:center}#tt.on{opacity:1}
+</style></head><body>
+<header class="top"><div class="w"><a class="brand" href="#beranda"><img class="lg" src="data:image/png;base64,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" alt="" width="32" height="32">Eco<span>life</span></a>
+<nav aria-label="Navigasi utama"><a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#alur">Alur</a><a href="#model">Model</a><a href="#pantau">Pantau</a><a href="#prediksi">Prediksi</a><a href="#tim">Tim</a></nav>
+<button id="th" aria-label="Ganti tema terang atau gelap">🌓</button></div></header>
+
+<main>
+<section class="hero" id="beranda"><div class="w"><div>
+<img class="hl" src="data:image/png;base64,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" alt="Logo Ecolife" width="76" height="76"><p class="inst">Universitas Halu Oleo, Fakultas MIPA, Rekayasa Perangkat Lunak</p>
+<h1>Kenali dan catat kebiasaan konsumsi yang ramah lingkungan</h1>
+<p>Ecolife adalah website edukasi dan pemantauan kebiasaan harian. Pelajari kaitan konsumsi dengan sampah, kumpulkan poin dari kebiasaan baik, lalu perkirakan tingkat kebiasaan ramah lingkunganmu.</p>
+<div class="cta"><a class="btn" href="#prediksi">Coba prediksi</a><a class="btn s" href="#pantau">Catat kebiasaan</a></div></div>
+<div class="hs"><div><b>33,79 jt ton</b><small>timbulan sampah Indonesia 2024</small></div><div><b>50,8%</b><small>berasal dari rumah tangga</small></div><div><b>39,36%</b><small>berupa sisa makanan</small></div><div><b>19,64%</b><small>berupa sampah plastik</small></div></div></div></section>
+
+<section class="p" id="tentang"><div class="w"><h2>Mengapa kebiasaan konsumsi penting?</h2>
+<p class="lead">Rumah tangga adalah sumber sampah terbesar, jadi pilihan kecil sehari-hari berpengaruh langsung. Angka SIPSN dapat berubah karena bergantung pada jumlah kabupaten/kota yang melapor.</p>
+<div class="g"><div class="card"><h3>Kaitan dengan SDG 12</h3><p>Tujuan ke-12 (Konsumsi dan Produksi yang Bertanggung Jawab) mengajak kita memakai sumber daya secara bijak dan mengurangi limbah (target 12.5), serta memberi informasi untuk gaya hidup berkelanjutan (target 12.8).</p></div>
+<div class="card"><h3>Mulai dari kebiasaan kecil</h3><ul><li>🥤 Bawa tumbler dan botol minum sendiri.</li><li>🛍️ Bawa tas belanja, tolak kantong plastik.</li><li>🚫 Tolak sedotan dan alat makan sekali pakai.</li><li>♻️ Pakai kembali barang yang masih layak.</li><li>🗑️ Pilah sampah organik, plastik, kertas, dan logam.</li></ul></div>
+<div class="card"><h3>Sumber data</h3><ul><li><a href="https://databoks.katadata.co.id/en/environment/statistics/67fcf855d9122/indonesias-waste-generation-reaches-3379-million-tons-in-2024" target="_blank" rel="noopener">Databoks: timbulan sampah 2024</a></li><li><a href="https://sipsn.menlhk.go.id/sipsn/" target="_blank" rel="noopener">SIPSN KLHK</a></li></ul></div></div></div></section>
+
+<section class="p alt" id="alur"><div class="w"><h2>Bagaimana Ecolife bekerja?</h2>
+<p class="lead">Empat langkah dari belajar sampai mendapat hasil perkiraan.</p>
+<div class="g"><div class="card"><span class="n">1</span><h3>Pelajari</h3><p>Baca data sampah dan kebiasaan sederhana yang bisa dimulai hari ini.</p></div>
+<div class="card"><span class="n">2</span><h3>Catat</h3><p>Centang kebiasaan yang sudah dilakukan, lalu simpan untuk mengumpulkan poin.</p></div>
+<div class="card"><span class="n">3</span><h3>Isi data gaya hidup</h3><p>Masukkan pola makan, transportasi, sampah, dan energi di halaman prediksi.</p></div>
+<div class="card"><span class="n">4</span><h3>Lihat hasil</h3><p>Model Logistic Regression menampilkan tingkat Rendah, Sedang, atau Tinggi beserta persentasenya.</p></div></div></div></section>
+
+<section class="p" id="model"><div class="w"><h2>Tentang model prediksi</h2>
+<p class="lead">Prediksi berjalan langsung di browser, tanpa mengirim datamu ke server.</p>
+<div class="two"><div class="card"><h3>Logistic Regression</h3><div class="g" style="margin-top:10px"><div class="st"><b>±88,8%</b><small>akurasi data uji</small></div><div class="st"><b>3</b><small>kelas hasil</small></div><div class="st"><b>58</b><small>fitur input</small></div></div>
+<p class="note" style="margin-top:10px">17 fitur numerik (distandarkan) dan 41 fitur kategorikal (one-hot). Skor tiap kelas diubah menjadi persentase dengan fungsi softmax.</p></div>
+<div class="card"><h3>Dataset dan batasannya</h3><p>Model dilatih dari dataset Kaggle <i>Individual Carbon Footprint Calculation</i>. Data tersebut <b>sintetis</b>, jadi hasilnya adalah prototipe untuk pembelajaran, bukan penilaian pasti.</p>
+<p class="note" style="margin-top:8px">Akurasi menunjukkan persentase tebakan kelas yang benar pada data yang tidak dipakai untuk melatih model.</p></div></div></div></section>
+
+<section class="p alt" id="pantau"><div class="w"><h2>Pantau kebiasaan harianmu</h2>
+<p class="lead">Centang yang sudah kamu lakukan hari ini, lalu simpan. Data tersimpan di browser ini saja.</p>
+<div class="two"><div><div class="card"><h3>Kebiasaan hari ini</h3><div id="acts"></div>
+<p style="margin-top:14px"><button class="btn" id="sv">Simpan hari ini</button> <button class="btn s" id="rs">Reset</button></p></div></div>
+<div><div class="card"><h3>Pencapaianmu</h3><div class="g" style="margin-top:10px"><div class="st"><b id="tp">0</b><small>total poin</small></div><div class="st"><b id="hr">0</b><small>hari tercatat</small></div><div class="st"><b id="lv">Pemula</b><small>level</small></div></div>
+<div class="bar" style="margin-top:14px"><i id="pb" style="width:0;background:var(--pr)"></i></div><p class="note" id="pn"></p>
+<p class="note">Level: Pemula (kurang dari 50), Pejuang (50 sampai 149), Juara (150 ke atas).</p></div>
+<div class="card"><h3>Riwayat pencatatan</h3><div class="sc"><table><thead><tr><th>No.</th><th>Waktu</th><th>Poin</th></tr></thead><tbody id="hb"></tbody></table></div></div></div></div></div></section>
+
+<section class="p" id="prediksi"><div class="w"><h2>Prediksi tingkat kebiasaan ramah lingkungan</h2>
+<p class="lead">Isi data di bawah. Bagian lanjutan boleh dilewati, nilai bawaannya sudah terisi.</p>
+<div class="card"><div class="fg" id="ff"></div>
+<details><summary>Data lanjutan (opsional)</summary><div class="fg" id="fa" style="margin-top:10px"></div></details>
+<button class="btn" id="go">Hitung prediksi</button></div>
+<div class="card" id="out" style="display:none" aria-live="polite"></div>
+<div class="card"><h3>Riwayat prediksi</h3><p class="note">Menampilkan maksimal 10 hasil terbaru yang tersimpan di browser ini.</p><div class="sc"><table><thead><tr><th>No.</th><th>Hasil</th><th>Tinggi</th><th>Sedang</th><th>Rendah</th><th>Waktu</th></tr></thead><tbody id="pb2"></tbody></table></div></div></div></section>
+
+<section class="p alt" id="tim"><div class="w"><h2>Tim pengembang</h2>
+<p class="lead">Dibuat untuk tugas mata kuliah Rekayasa Perangkat Lunak, Program Studi Ilmu Komputer, Universitas Halu Oleo.</p>
+<div class="g"><div class="card mem"><div class="av">MU</div><div><h3>Maya Ulfa Zakiyah</h3><p class="note">NIM F1G125012</p></div></div><div class="card mem"><div class="av">RW</div><div><h3>Rafael Benaya Wulumohitu</h3><p class="note">NIM F1G125073</p></div></div><div class="card mem"><div class="av">AA</div><div><h3>Afra Naila Arkarna</h3><p class="note">NIM F1G125022</p></div></div></div></div></section>
+</main>
+<footer><div class="w"><b>Ecolife</b> Edukasi dan Pemantauan Kebiasaan Konsumsi Ramah Lingkungan<br>Universitas Halu Oleo, Fakultas Matematika dan Ilmu Pengetahuan Alam, Program Studi Ilmu Komputer<br>© 2026 Ecolife. Dibangun sebagai proyek pembelajaran.</div></footer>
+<div id="tt" role="status" aria-live="polite"></div>
+<script>
+const M={"cls":["Rendah","Sedang","Tinggi"],"b":[-0.001,0.638,-0.638],"num":["Monthly Grocery Bill","Vehicle Monthly Distance Km","Waste Bag Weekly Count","How Long TV PC Daily Hour","How Many New Clothes Monthly","How Long Internet Daily Hour","Recycle_Glass","Recycle_Metal","Recycle_Paper","Recycle_Plastic","Recycle_Count","Cook_Airfryer","Cook_Grill","Cook_Microwave","Cook_Oven","Cook_Stove","Cook_Count"],"mu":[174.45,2033.63,4.02,12.09,25.06,11.91,0.5,0.5,0.5,0.5,2.0,0.5,0.5,0.51,0.51,0.51,2.52],"sd":[72.13,2762.33,1.99,7.11,14.71,7.3,0.5,0.5,0.5,0.5,1.01,0.5,0.5,0.5,0.5,0.5,1.32],"cat":{"Body Type":["normal","obese","overweight","underweight"],"Sex":["female","male"],"Diet":["omnivore","pescatarian","vegan","vegetarian"],"How Often Shower":["daily","less frequently","more frequently","twice a day"],"Heating Energy Source":["coal","electricity","natural gas","wood"],"Transport":["private","public","walk/bicycle"],"Vehicle Type":["diesel","electric","hybrid","lpg","none","petrol"],"Social Activity":["never","often","sometimes"],"Frequency of Traveling by Air":["frequently","never","rarely","very frequently"],"Waste Bag Size":["extra large","large","medium","small"],"Energy efficiency":["No","Sometimes","Yes"]},"W":[[0.586,3.194,1.447,0.188,1.751,0.413,-0.143,-0.347,-0.404,-0.022,-0.454,0.011,0.011,0.032,0.125,0.026,0.077,-1.085,2.302,0.771,-1.991,-1.475,1.472,0.9,0.132,-0.66,-0.375,-0.12,-0.123,0.15,0.089,1.907,-1.997,-0.015,0.102,0.595,-0.548,-0.05,2.108,-7.511,-0.162,2.392,-0.599,3.768,-0.695,0.682,0.01,0.72,-4.529,-3.136,6.942,1.679,0.559,-0.672,-1.569,0.221,0.041,-0.265],[0.07,-0.36,0.127,0.024,0.175,0.041,0.005,-0.023,-0.057,-0.008,-0.041,0.012,0.012,0.01,-0.041,0.028,0.008,0.203,0.083,0.053,0.183,0.336,0.186,0.174,0.118,0.173,0.058,0.144,0.078,0.172,0.128,0.265,-0.034,0.158,0.133,0.45,0.093,-0.021,0.193,0.465,0.352,-0.356,0.072,-0.204,0.098,0.291,0.133,0.334,-0.419,-0.266,0.873,0.318,0.161,0.146,-0.104,0.133,0.186,0.203],[-0.656,-2.833,-1.574,-0.211,-1.925,-0.454,0.137,0.37,0.461,0.03,0.495,-0.023,-0.023,-0.042,-0.084,-0.054,-0.086,0.881,-2.385,-0.823,1.808,1.139,-1.658,-1.073,-0.25,0.487,0.318,-0.025,0.045,-0.322,-0.217,-2.172,2.031,-0.143,-0.235,-1.045,0.455,0.071,-2.301,7.046,-0.19,-2.036,0.527,-3.565,0.597,-0.972,-0.143,-1.054,4.948,3.402,-7.815,-1.997,-0.72,0.526,1.673,-0.353,-0.227,0.062]]};
+function predict(v){
+ v=Object.assign({},v);
+ v.Recycle_Count=["Glass","Metal","Paper","Plastic"].reduce((a,k)=>a+(+v["Recycle_"+k]||0),0);
+ v.Cook_Count=["Airfryer","Grill","Microwave","Oven","Stove"].reduce((a,k)=>a+(+v["Cook_"+k]||0),0);
+ const f=[];
+ M.num.forEach((n,i)=>f.push((+v[n]-M.mu[i])/M.sd[i]));
+ Object.keys(M.cat).forEach(c=>M.cat[c].forEach(o=>f.push(v[c]===o?1:0)));
+ const s=M.W.map((w,k)=>w.reduce((a,x,i)=>a+x*f[i],M.b[k]));
+ const mx=Math.max(...s),e=s.map(x=>Math.exp(x-mx)),t=e.reduce((a,b)=>a+b,0);
+ return M.cls.map((c,i)=>({c,p:e[i]/t}));
+}
+
+const SEL={"Diet":["Pola makan",{omnivore:"Pemakan daging & sayur",pescatarian:"Pescatarian",vegetarian:"Vegetarian",vegan:"Vegan"},"omnivore"],
+"Transport":["Transportasi utama",{private:"Kendaraan pribadi",public:"Transportasi umum","walk/bicycle":"Jalan kaki / sepeda"},"public"],
+"Vehicle Type":["Jenis kendaraan",{none:"Tidak punya",petrol:"Bensin",diesel:"Diesel",hybrid:"Hybrid",lpg:"LPG",electric:"Listrik"},"none"],
+"Frequency of Traveling by Air":["Naik pesawat",{never:"Tidak pernah",rarely:"Jarang",frequently:"Sering","very frequently":"Sangat sering"},"rarely"],
+"Waste Bag Size":["Ukuran kantong sampah",{small:"Kecil",medium:"Sedang",large:"Besar","extra large":"Sangat besar"},"medium"],
+"Energy efficiency":["Peduli alat hemat energi?",{Yes:"Ya",Sometimes:"Kadang",No:"Tidak"},"Sometimes"],
+"Heating Energy Source":["Sumber energi pemanas/memasak",{electricity:"Listrik","natural gas":"Gas alam",wood:"Kayu",coal:"Batu bara"},"electricity"],
+"Body Type":["Tipe tubuh",{underweight:"Kurus",normal:"Normal",overweight:"Berlebih",obese:"Obesitas"},"normal"],
+"Sex":["Jenis kelamin",{female:"Perempuan",male:"Laki-laki"},"female"],
+"How Often Shower":["Frekuensi mandi",{"less frequently":"Jarang",daily:"Sekali sehari","more frequently":"Lebih sering","twice a day":"Dua kali sehari"},"daily"],
+"Social Activity":["Aktivitas sosial",{never:"Tidak pernah",sometimes:"Kadang",often:"Sering"},"sometimes"]};
+const NUM={"Monthly Grocery Bill":["Belanja bulanan (USD)",173,0,500],"Vehicle Monthly Distance Km":["Jarak kendaraan per bulan (km)",0,0,10000],
+"Waste Bag Weekly Count":["Kantong sampah per minggu",3,0,10],"How Many New Clothes Monthly":["Pakaian baru per bulan",5,0,50],
+"How Long TV PC Daily Hour":["Jam TV/PC per hari",8,0,24],"How Long Internet Daily Hour":["Jam internet per hari",6,0,24]};
+const main=["Diet","Transport","Vehicle Type","Frequency of Traveling by Air","Waste Bag Size","Energy efficiency","Heating Energy Source"];
+const mnum=["Monthly Grocery Bill","Vehicle Monthly Distance Km","Waste Bag Weekly Count","How Many New Clothes Monthly"];
+const TIP={Tinggi:"Pertahankan! Ajak teman ikut kebiasaan yang sama dan bagikan tipsmu.",Sedang:"Sudah baik, tinggal ditingkatkan. Kurangi perjalanan pesawat/kendaraan pribadi dan perbanyak memilah sampah.",Rendah:"Mulai dari langkah kecil: bawa tumbler dan tas belanja, kurangi plastik sekali pakai, dan coba memilah sampah."};
+const COL={Tinggi:"var(--pr)",Sedang:"var(--md)",Rendah:"var(--wa)"};
+
+const ld=(k,d)=>{try{return JSON.parse(localStorage.getItem(k)||"")||d}catch(e){return d}};
+const sv=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+
+let SS=ld("ecolife",{p:0,d:0,h:[]}),HH=ld("ecolife_pred",[]);
+const DB={async pantau(){return SS},
+async simpan(ix){const p=ix.reduce((a,i)=>a+ACT[i][1],0);SS={p:SS.p+p,d:SS.d+1,h:[{p,t:new Date().toISOString()},...SS.h].slice(0,10)};sv("ecolife",SS);return SS},
+async reset(){SS={p:0,d:0,h:[]};try{localStorage.removeItem("ecolife")}catch(e){}return SS},
+async riwayat(){return HH},
+async prediksi(v){const r=predict(v),top=r.reduce((a,b)=>b.p>a.p?b:a),pc=c=>(r.find(x=>x.c===c).p*100).toFixed(1);
+HH=[{c:top.c,Tinggi:pc("Tinggi"),Sedang:pc("Sedang"),Rendah:pc("Rendah"),t:new Date().toISOString()},...HH].slice(0,10);sv("ecolife_pred",HH);return{r,h:HH}}};
+
+const $=s=>document.querySelector(s);
+const fmt=i=>new Date(i).toLocaleString("id-ID",{day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"});
+let tt;const toast=m=>{const e=$("#tt");e.textContent=m;e.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("on"),3200)};
+const run=f=>async()=>{try{await f()}catch(e){toast("Terjadi kesalahan, coba lagi.")}};
+$("#th").onclick=()=>{const r=document.documentElement,d=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme:dark)").matches;r.dataset.theme=d?"light":"dark"};
+
+/* Pantau */
+const ACT=[["🥤 Membawa tumbler",10],["🛍️ Membawa tas belanja",10],["🚫 Tidak memakai sedotan plastik",5],["🔁 Menggunakan kembali barang",10],["🗑️ Memilah sampah",10]];
+$("#acts").innerHTML=ACT.map((a,i)=>`<div class="act"><input type="checkbox" id="a${i}"><label for="a${i}">${a[0]}</label><span class="pt">+${a[1]}</span></div>`).join("");
+function draw(S){const p=S.p,l=p>=150?"Juara":p>=50?"Pejuang":"Pemula",nx=p>=150?0:p>=50?150:50;
+ $("#tp").textContent=p;$("#hr").textContent=S.d;$("#lv").textContent=l;
+ $("#pb").style.width=(nx?Math.min(100,p/nx*100):100)+"%";
+ $("#pn").textContent=nx?"Tinggal "+(nx-p)+" poin lagi menuju level berikutnya.":"Kamu sudah di level tertinggi. Pertahankan!";
+ $("#hb").innerHTML=S.h.length?S.h.map((x,i)=>`<tr><td>${i+1}</td><td>${fmt(x.t)}</td><td>+${x.p}</td></tr>`).join(""):'<tr><td colspan="3" class="note">Belum ada catatan. Centang kebiasaan lalu simpan.</td></tr>'}
+$("#sv").onclick=run(async()=>{const ix=ACT.map((a,i)=>i).filter(i=>$("#a"+i).checked);
+ if(!ix.length){toast("Centang minimal satu kebiasaan.");return}
+ ix.forEach(i=>$("#a"+i).checked=false);draw(await DB.simpan(ix));toast("Tersimpan! +"+ix.reduce((a,i)=>a+ACT[i][1],0)+" poin 🌱")});
+let arm=0;const rs=$("#rs");
+rs.onclick=run(async()=>{if(!arm){arm=setTimeout(()=>{arm=0;rs.textContent="Reset"},4000);rs.textContent="Yakin? Klik lagi";return}
+ clearTimeout(arm);arm=0;rs.textContent="Reset";draw(await DB.reset());toast("Poin dan riwayat pencatatan sudah dihapus.")});
+
+/* Prediksi */
+const sel=k=>`<div class="f"><label for="s${k.replace(/\W/g,"")}">${SEL[k][0]}</label><select id="s${k.replace(/\W/g,"")}" data-k="${k}">${Object.entries(SEL[k][1]).map(([v,t])=>`<option value="${v}"${v===SEL[k][2]?" selected":""}>${t}</option>`).join("")}</select></div>`;
+const num=k=>`<div class="f"><label for="n${k.replace(/\W/g,"")}">${NUM[k][0]}</label><input id="n${k.replace(/\W/g,"")}" type="number" data-k="${k}" value="${NUM[k][1]}" min="${NUM[k][2]}" max="${NUM[k][3]}"></div>`;
+const ck=(t,pre,items)=>`<div class="f" style="grid-column:1/-1"><label>${t}</label><div class="ck">${items.map(i=>`<label><input type="checkbox" data-k="${pre}_${i}">${i}</label>`).join("")}</div></div>`;
+$("#ff").innerHTML=main.map(sel).join("")+mnum.map(num).join("")+ck("Jenis sampah yang kamu daur ulang","Recycle",["Glass","Metal","Paper","Plastic"]);
+$("#fa").innerHTML=["Body Type","Sex","How Often Shower","Social Activity"].map(sel).join("")+["How Long TV PC Daily Hour","How Long Internet Daily Hour"].map(num).join("")+ck("Alat memasak","Cook",["Airfryer","Grill","Microwave","Oven","Stove"]);
+function drawH(H){$("#pb2").innerHTML=H.length?H.map((x,i)=>`<tr><td>${i+1}</td><td><b style="color:${COL[x.c]}">${x.c}</b></td><td>${x.Tinggi}%</td><td>${x.Sedang}%</td><td>${x.Rendah}%</td><td>${fmt(x.t)}</td></tr>`).join(""):'<tr><td colspan="6" class="note">Belum ada riwayat prediksi.</td></tr>'}
+$("#go").onclick=run(async()=>{const v={};
+ document.querySelectorAll("[data-k]").forEach(e=>v[e.dataset.k]=e.type==="checkbox"?(e.checked?1:0):e.type==="number"?(+e.value||0):e.value);
+ const {r,h}=await DB.prediksi(v),top=r.reduce((a,b)=>b.p>a.p?b:a),o=$("#out"),pc=c=>r.find(x=>x.c===c).p*100;o.style.display="block";
+ o.innerHTML=`<div class="res"><div class="note">Tingkat kebiasaan ramah lingkungan</div><div class="lv" style="color:${COL[top.c]}">${top.c}</div></div>`+
+ ["Tinggi","Sedang","Rendah"].map(c=>`<div>${c}: <b>${pc(c).toFixed(1)}%</b></div><div class="bar"><i style="width:${pc(c)}%;background:${COL[c]}"></i></div>`).join("")+
+ `<p>💡 ${TIP[top.c]}</p><p class="note">Hasil bersifat perkiraan dari data sintetis.</p>`;
+ drawH(h);o.scrollIntoView({behavior:"smooth",block:"nearest"})});
+(async()=>{try{draw(await DB.pantau());drawH(await DB.riwayat())}catch(e){toast("Gagal memuat riwayat.")}})();
+</script></body></html>
